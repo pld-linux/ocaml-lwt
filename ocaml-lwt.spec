@@ -11,7 +11,7 @@ Summary:	Promises and event-driven I/O for OCaml
 Summary(pl.UTF-8):	Obietnice i we/wy sterowane zdarzeniami dla OCamla
 Name:		ocaml-lwt
 Version:	5.4.2
-Release:	1
+Release:	3
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/ocsigen/lwt/releases
