@@ -63,7 +63,7 @@ działać równolegle.
 
 %package devel
 Summary:	Promises and event-driven I/O for OCaml - development part
-Summary(pl.UTF-8):	Obietnice i we/wy sterowane zdarzeniami dla OCamla - cześć programistyczna
+Summary(pl.UTF-8):	Obietnice i we/wy sterowane zdarzeniami dla OCamla - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
@@ -92,7 +92,7 @@ Silnik libuv dla biblioteki OCamla Lwt.
 
 %package luv-devel
 Summary:	Libuv engine for Lwt OCaml library - development part
-Summary(pl.UTF-8):	Silnik libuv dla biblioteki OCamla Lwt - cześć programistyczna
+Summary(pl.UTF-8):	Silnik libuv dla biblioteki OCamla Lwt - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-luv = %{version}-%{release}
@@ -124,7 +124,7 @@ JavaScriptu.
 
 %package ppx-devel
 Summary:	PPX syntax for OCaml Lwt library - development part
-Summary(pl.UTF-8):	Składnia PPX dla biblioteki OCamla Lwt - cześć programistyczna
+Summary(pl.UTF-8):	Składnia PPX dla biblioteki OCamla Lwt - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-ppx = %{version}-%{release}
@@ -153,7 +153,7 @@ Funkcje pomocnicze do używania biblioteki OCamla React z Lwt.
 
 %package react-devel
 Summary:	Helpers for using OCaml React library with Lwt - development part
-Summary(pl.UTF-8):	Funkcje pomocnicze do używania biblioteki OCamla React z Lwt - cześć programistyczna
+Summary(pl.UTF-8):	Funkcje pomocnicze do używania biblioteki OCamla React z Lwt - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-react = %{version}-%{release}
