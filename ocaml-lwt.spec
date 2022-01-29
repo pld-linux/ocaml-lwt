@@ -11,7 +11,7 @@ Summary:	Promises and event-driven I/O for OCaml
 Summary(pl.UTF-8):	Obietnice i we/wy sterowane zdarzeniami dla OCamla
 Name:		ocaml-lwt
 Version:	5.4.2
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/ocsigen/lwt/releases
@@ -24,6 +24,7 @@ BuildRequires:	ocaml-dune-devel >= 1.8.0
 BuildRequires:	ocaml-findlib >= 1.7.3
 BuildRequires:	ocaml-luv-devel
 BuildRequires:	ocaml-mmap-devel >= 1.1.0
+BuildRequires:	ocaml-ocaml-compiler-libs-devel
 BuildRequires:	ocaml-ocplib-endian-devel
 BuildRequires:	ocaml-ppxlib-devel >= 0.16.0
 BuildRequires:	ocaml-react-devel >= 1.0.0
@@ -208,15 +209,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/lwt/*.cmt
 %{_libdir}/ocaml/lwt/*.cmti
 %{_libdir}/ocaml/lwt/*.mli
+%{_libdir}/ocaml/lwt/unix/liblwt_unix_stubs.a
 %{_libdir}/ocaml/lwt/unix/*.cmi
 %{_libdir}/ocaml/lwt/unix/*.cmt
 %{_libdir}/ocaml/lwt/unix/*.cmti
 %{_libdir}/ocaml/lwt/unix/*.mli
 %if %{with ocaml_opt}
-%{_libdir}/ocaml/lwt/*.a
+%{_libdir}/ocaml/lwt/lwt.a
 %{_libdir}/ocaml/lwt/*.cmx
 %{_libdir}/ocaml/lwt/*.cmxa
-%{_libdir}/ocaml/lwt/unix/*.a
+%{_libdir}/ocaml/lwt/unix/lwt_unix.a
 %{_libdir}/ocaml/lwt/unix/*.cmx
 %{_libdir}/ocaml/lwt/unix/*.cmxa
 %endif
@@ -239,7 +241,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/lwt_luv/*.cmti
 %{_libdir}/ocaml/lwt_luv/*.mli
 %if %{with ocaml_opt}
-%{_libdir}/ocaml/lwt_luv/*.a
+%{_libdir}/ocaml/lwt_luv/lwt_luv.a
 %{_libdir}/ocaml/lwt_luv/*.cmx
 %{_libdir}/ocaml/lwt_luv/*.cmxa
 %endif
@@ -263,7 +265,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/lwt_ppx/*.cmti
 %{_libdir}/ocaml/lwt_ppx/*.mli
 %if %{with ocaml_opt}
-%{_libdir}/ocaml/lwt_ppx/*.a
+%{_libdir}/ocaml/lwt_ppx/ppx_lwt.a
 %{_libdir}/ocaml/lwt_ppx/*.cmx
 %{_libdir}/ocaml/lwt_ppx/*.cmxa
 %endif
@@ -286,7 +288,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/lwt_react/*.cmti
 %{_libdir}/ocaml/lwt_react/*.mli
 %if %{with ocaml_opt}
-%{_libdir}/ocaml/lwt_react/*.a
+%{_libdir}/ocaml/lwt_react/lwt_react.a
 %{_libdir}/ocaml/lwt_react/*.cmx
 %{_libdir}/ocaml/lwt_react/*.cmxa
 %endif
